@@ -20,7 +20,7 @@ namespace Shortly.Client.Controllers
         }
         public IActionResult Create()
         {
-            var shorttenedUrl = "shor";
+            var shorttenedUrl = "short";
             TempData["SuccessMessage"] = "Successful!";
             ViewBag.Test1 = "test1";
             ViewData["Test2"] = "test2";

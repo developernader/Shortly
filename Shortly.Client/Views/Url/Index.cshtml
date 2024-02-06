@@ -9,11 +9,8 @@
 }
  
 <h4>@ViewBag.ShortenedUrl</h4>
-
-@foreach (var url in allUrls)
+@if (ViewBag.SuccessMessage != null)
 {
-    <ul>
-        <li>@url</li>
-    </ul>    
+    <h3>Success  @TempData["SuccessMessage"].ToString()</h3>
 }
 

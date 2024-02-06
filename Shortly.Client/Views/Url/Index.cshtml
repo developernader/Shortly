@@ -5,9 +5,15 @@
 
 @{
     var currentDateTime = DateTime.UtcNow;
+    var allUrls = ViewData["allUrls"] as List<string>;
 }
-<h4>Example</h4>
-@foreach (var item in @Model)
+ 
+<h4>@ViewBag.ShortenedUrl</h4>
+
+@foreach (var url in allUrls)
 {
-    <p>Original link: @item.OriginalLink</p>
+    <ul>
+        <li>@url</li>
+    </ul>    
 }
+

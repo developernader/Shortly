@@ -7,17 +7,9 @@ namespace Shortly.Client.Controllers
     {
         public IActionResult Index()
         {
-            var urlDb = new Url()
-            {
-                Id = 1,
-                OriginalLink = "Https://original.com",
-                ShortLink = "shrtly",
-                NrOfClicks = 1,
-                UserId = 1,
-            };
-            var allData = new List<Url>();
-            allData.Add(urlDb);
-            return View(allData);
+            ViewBag.ShortenedUrl = "This is just a shot url";
+            ViewBag.AllUrls = new List<string>() { "url1", "url2", "url3" };
+            return View();
         }
     }
 }

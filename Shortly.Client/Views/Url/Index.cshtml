@@ -1,11 +1,13 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Url>;
+
 @{
 }
 
 @{
     var currentDateTime = DateTime.UtcNow;
 }
-<h4>Welcome to this App</h4>
-<h3>@currentDateTime</h3>
+<h4>Example</h4>
+@foreach (var item in @Model)
+{
+    <p>Original link: @item.OriginalLink</p>
+}

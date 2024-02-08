@@ -1,16 +1,13 @@
-﻿@model List<Url>;
-
-@{
+﻿@{
+    ViewData.["Title"] = "All shorts links";
 }
 
-@{
-    var currentDateTime = DateTime.UtcNow;
-    var allUrls = ViewData["allUrls"] as List<string>;
-}
- 
-<h4>@ViewBag.ShortenedUrl</h4>
-@if (ViewBag.SuccessMessage != null)
-{
-    <h3>Success  @TempData["SuccessMessage"].ToString()</h3>
-}
+<div class="container">
+    <a class="btn btn-outline-success" asp-controller="Home" asp-action="Index">Add New</a>
+</div>
 
+<div class="container">
+    <table class="table table-stripped">
+
+    </table>
+</div>
